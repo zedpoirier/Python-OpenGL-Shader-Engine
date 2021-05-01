@@ -1,4 +1,3 @@
-#version 330 core
 //----------------------------------------------------
 // Primitive Operations (Constructive Solid Geometry)
 //----------------------------------------------------
@@ -6,6 +5,20 @@
 float combine(float distA, float distB)
 {
 	return min(distA, distB);
+}
+
+// polynomial smooth min (k = 0.1);
+float smin( float a, float b, float k )
+{
+    float h = max( k-abs(a-b), 0.0 )/k;
+    return min( a, b ) - h*h*k*(1.0/4.0);
+}
+
+// polynomial smooth min (k = 0.1);
+float smin3( float a, float b, float k )
+{
+    float h = max( k-abs(a-b), 0.0 )/k;
+    return min( a, b ) - h*h*h*k*(1.0/6.0);
 }
 
 float intersect(float distA, float distB)

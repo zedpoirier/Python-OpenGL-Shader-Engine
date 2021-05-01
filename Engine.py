@@ -7,7 +7,7 @@ from OpenGL.GL import *
 from OpenGL.GL.shaders import compileProgram, compileShader
 
 # globals
-screenPosX = 960
+screenPosX = 1920
 screenPosY = 0
 width = 960     
 height = 1080
@@ -20,7 +20,7 @@ frag3 = "alchemy.frag"
 frag = frag2
 
 camSpeed = 0.1
-camPos = np.array([0.0,0.0,10.0])
+camPos = np.array([0.0,10.0,10.0])
 camLook = np.array([0.0,0.0,-1.0])
 
 def makeWindow():
