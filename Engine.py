@@ -7,10 +7,10 @@ from OpenGL.GL import *
 from OpenGL.GL.shaders import compileProgram, compileShader
 
 # globals
-screenPosX = 1920
+screenPosX = 0
 screenPosY = 0
 width = 960     
-height = 1080
+height = 540
 runTime = 0.0
 newTime = time.time()
 
